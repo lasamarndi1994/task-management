@@ -57,12 +57,17 @@
                                     aria-current="true"
                                 >
                                     {{ project.name }}
-                                    <i
+                                    <button
+                                        class="btn btn-danger btn-sm"
+                                        type="button"
                                         @click="
                                             removeProject(project.id, index)
                                         "
-                                        class="fa fa-trash pointer text-danger"
-                                    ></i>
+                                    >
+                                        <i
+                                            class="fa fa-trash pointer text-white"
+                                        ></i>
+                                    </button>
                                 </li>
                             </ul>
 
@@ -155,7 +160,7 @@
 
 <script>
 import draggable from "vuedraggable";
-import CreateTask from "./CreateTask.vue";
+import CreateTask from "./components/CreateTask.vue";
 
 export default {
     components: {
